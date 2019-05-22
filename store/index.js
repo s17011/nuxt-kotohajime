@@ -7,7 +7,9 @@ const appStore = () => {
     },
     mutations: {
       breed_list_update(state, payload) {
-        state.breed_list = {...payload}
+        state.breed_list = {
+          ...payload
+        }
       },
     }
   })
