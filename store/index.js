@@ -4,6 +4,7 @@ const appStore = () => {
   return new Vuex.Store({
     state: {
       breed_list: {},
+      dog_list: {},
     },
     mutations: {
       breed_list_update(state, payload) {
@@ -11,6 +12,9 @@ const appStore = () => {
           ...payload
         }
       },
+      dog_list_update(state, payload) {
+        state.dog_list = [...payload]
+      }
     }
   })
 };
