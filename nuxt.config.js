@@ -2,6 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  modules: [
+    '@nuxtjs/bulma',
+  ],
   head: {
     title: 'inukoro',
     meta: [
@@ -36,4 +39,3 @@ module.exports = {
     }
   }
 }
-
