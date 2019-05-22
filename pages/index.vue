@@ -5,11 +5,16 @@
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import dogApi from '@/api/dog'
 
 export default {
   components: {
     AppLogo
-  }
+  },
+  async fetch({store}) {
+    let json = await dogApi.breeds();
+    store.commit('breed_list_update', json);
+  },
 }
 </script>
 
